@@ -1,0 +1,79 @@
+
+
+{% extends "base.html" %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+
+<div>
+    <div class="container">
+        <div class="row">
+
+            <div class="container-fluid col-lg-12">
+                <div>
+
+                    <h4 align="center"> Instructions </h4>
+{##}
+{#                        <div class="input-group input-group-sm mb-3">#}
+{#                        <div class="input-group input-group-md" style = "margin-top: 20px">#}
+{#                          <div class="input-group-prepend space" >#}
+{#                            <span class="input-group-text" id="inputGroup-sizing-md">Location</span>#}
+{#                          </div>#}
+{#                          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm">#}
+{#                        </div>#}
+{##}
+{#                </div>#}
+{##}
+{#                    <div style="display: flex; justify-content: center">#}
+{#                        <button type="button" class="btn btn-primary btn-lg" style ="margin-top: 25px; ">Bring me there!</button>#}
+{#                    </div>#}
+
+                    <div class = "instructions" style="margin-top: 5px; font-size:15px; display:flex; justify-content:center">
+                        <ol>
+                            {% for row in instructions %}
+                             <li>{{ row }}</li>
+                            {% endfor %}
+                        </ol>
+                    </div>
+
+                    <div style="display: flex; justify-content: center">
+
+                       <!-- Button trigger modal -->
+                    <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" style = "margin-top: 25px;">
+                        Show Map
+                    </button>
+<!-- Modal -->
+                    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                      <div class="modal-dialog modal-dialog-centered" role="document">
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel" align = "center">{{ start }} to {{ end }}</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                              <span aria-hidden="true">&times;</span>
+                            </button>
+                          </div>
+                          <div class="modal-body">
+                            <img src="data:image/png;base64,{{ map }}" width="300" height="300" />
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    </div>
+
+
+
+
+
+            </div>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

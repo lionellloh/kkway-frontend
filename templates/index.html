@@ -1,0 +1,38 @@
+
+
+{% extends "base.html" %}
+
+
+{% block title %}Home{% endblock %}
+
+{% block body %}
+
+
+<div>
+    <div class="container">
+        <div class="row">
+
+            <div class="container-fluid col-lg-12">
+                <div>
+
+                    <h4 align="center"> Where are you going?</h4>
+
+                        <div class="input-group input-group-sm mb-3" >
+                        <div class="input-group input-group-md" style = "margin-top: 20px">
+                          <div class="input-group-prepend space" >
+{#                            <span class="input-group-text" id="inputGroup-sizing-md">Destination</span>#}
+                          </div>
+                          <input type="text" class="form-control" aria-label="Large" aria-describedby="inputGroup-sizing-sm" placeholder="Destination">
+                        </div>
+                        </div>
+
+                </div>
+            </div>
+        </div>
+</div>
+
+<div style="display: flex; justify-content: center">
+                        <button type="button" class="btn btn-primary btn-lg" style ="margin-top: 25px; ">Bring me there!</button>
+                    </div>
+
+{% endblock %}
