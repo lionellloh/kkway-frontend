@@ -11,7 +11,7 @@ Jinja2==2.10
 kiwisolver==1.0.1
 MarkupSafe==1.0
 matplotlib==3.0.0
-numpy==1.15.2
+numpy==1.22.0
 pyparsing==2.2.1
 python-dateutil==2.7.3
 requests==2.19.1
